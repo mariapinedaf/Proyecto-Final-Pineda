@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Blog{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/styles.css' %}">
+</head>
+<body>
+    <nav>
+        <a href="{% url 'home' %}">Inicio</a>
+        <a href="{% url 'about' %}">Sobre mí</a>
+        <a href="{% url 'register' %}">Registrarse</a>
+        <a href="{% url 'login' %}">Iniciar sesión</a>
+        <a href="{% url 'create_post' %}">Crear Publicación</a>
+        <a href="{% url 'list_posts' %}">Listar Publicaciones</a>
+    </nav>
+    {% block content %}{% endblock %}
+</body>
+</html>
